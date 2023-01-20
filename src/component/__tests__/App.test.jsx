@@ -1,11 +1,11 @@
 import renderWithRedux from "../../util/testUnit";
-
+import App from "../App"
 
 
 describe("App component",() =>{
 
-    it('shouldrender app with error', () => {
-        const {asFragment} = renderWithRedux(<App />, {});
+    it('should render app with error', () => {
+        const { asFragment } = renderWithRedux(<App /> , {});
         expect(asFragment()).toMatchSnapshot();
     });
 

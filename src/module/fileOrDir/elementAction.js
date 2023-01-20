@@ -1,4 +1,5 @@
-import { getElementByNameService, getElementByPathService, getElementnByNameAndPathService } from "./fileService";
+
+import { getElementByNameService, getElementByPathService, getElementnByNameAndPathService } from "./elementService";
 
 
 export const getElementByName = (name) => async (dispatch) => {
@@ -14,9 +15,9 @@ export const getElementByName = (name) => async (dispatch) => {
     catch(error){
         dispatch({ type: 'ELEMENTLISTERROR' });
     }
-}
+};
 
-export const getElementByPath = (path) = async (dispatch) =>{
+export const getElementByPath = (path) => async (dispatch) => {
     try{
         dispatch({type: 'ELEMENTPENDING'});
         const elements = await getElementByPathService(path);
@@ -24,12 +25,14 @@ export const getElementByPath = (path) = async (dispatch) =>{
             type: 'ELEMENTLISTPATH',
             payload: elements.data
         })
-    }catch(error){
+        dispatch({type: 'ELEMENTFULLFILLED'});
+    }
+    catch(error){
         dispatch({ type: 'ELEMENTLISTERROR' });
     }
-}
+};
 
-export const getElementByNameAndPath = (pathName) = async (dispatch) =>{
+export const getElementByNameAndPath = (pathName) => async (dispatch) =>{
     try{
         dispatch({type: 'ELEMENTPENDING'});
         const elements = await getElementnByNameAndPathService(pathName);
@@ -37,7 +40,8 @@ export const getElementByNameAndPath = (pathName) = async (dispatch) =>{
             type: 'ELEMENTLISTPATHNAME',
             payload: elements.data
         })
+        dispatch({type: 'ELEMENTFULLFILLED'});
     }catch(error){
         dispatch({ type: 'ELEMENTLISTERROR' });
     }
-}
+};

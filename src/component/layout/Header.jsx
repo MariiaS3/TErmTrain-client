@@ -4,11 +4,13 @@ import { AppBar, Toolbar, Typography } from "@mui/material"
 
 const Header=() =>{
     return (
-      <AppBar>
-        <Toolbar>
-            <Typography>TermTrain</Typography>
-        </Toolbar>
-      </AppBar>  
+      <AppBar position="fixed">
+      <Toolbar variant="dense"> 
+          <Typography variant="h6" color="inherit">
+              TermTrain
+          </Typography>
+      </Toolbar>
+  </AppBar>
     )
 }
 

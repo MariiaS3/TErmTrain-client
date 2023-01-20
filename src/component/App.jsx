@@ -1,10 +1,12 @@
+import axios from "axios";
 import React from "react";
 import Layout from "./layout/Layout";
+import TermContainer from "./terminal/TermContainer";
 
 const App = () =>{
     return ( 
         <Layout>
-            <div>Component App</div>
+            <TermContainer />
         </Layout>
     );
  }
