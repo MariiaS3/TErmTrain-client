@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 <h1 >TermTrain</h1>  
-TermTrain is a web application designed and written for my BA thesis. Now I want to develop this and deploy it on Heroku
+TermTrain is a web application designed and written for my BA thesis. Now I want to develop this and deploy it on Heroku.
+The frontend for this api is on repository TermTrain.
 
 <h1>General info</h1>
 The main goal of the work was to create a didactic application imitating the behavior of the command line. This app will help new users learn how to use Linux terminal commands.
