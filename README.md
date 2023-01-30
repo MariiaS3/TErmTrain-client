@@ -38,6 +38,9 @@ they could also leave their comments under selected questions.
 ```
   * JavaScript
   * React
+  * MUI
+  * Redux
+  * Axios
 ```
 
 <h4>CI/CD</h4>
