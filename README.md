@@ -33,28 +33,10 @@ they could also leave their comments under selected questions.
 </ul>
 
 <h2>Technologies</h2>
-<h4>Backend</h4>
-  
-```
-  * Java: 17
-  * Spring Boot
-  * JPA
-  * Hibernate
-  * Mockito
-  * JUnit
-```
-  
-  <h4>Frontend</h4>
   
 ```
   * JavaScript
   * React
-```
-  
-  <h4>Database</h4>
-  
-```
-  * H2
 ```
 
 <h4>CI/CD</h4>
@@ -62,7 +44,6 @@ they could also leave their comments under selected questions.
 ```
   * Heroku
   * Circleci
-  * Postgres
 ```
 
 
