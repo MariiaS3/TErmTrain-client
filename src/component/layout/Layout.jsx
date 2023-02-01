@@ -1,6 +1,7 @@
-import { Box } from "@mui/material"
-import Header from "./Header"
-import PropTypes from "prop-types"
+import { Box } from "@mui/material";
+import Header from "./Header";
+import PropTypes from "prop-types";
+import "./Layout.css";
 
 const propTypes = {
     children: PropTypes.node.isRequired
@@ -8,11 +9,11 @@ const propTypes = {
 
 const Layout = ({children}) => {
     return(
-        <Box>
+        <Box >
             <Box>
                 <Header />
             </Box>
-            <Box>
+            <Box className="child">
                 {children}
             </Box>
         </Box>
