@@ -30,6 +30,9 @@ const TermContainer = () =>{
 
     const dispatch = useDispatch();
 
+    //when we call store.dispatch(action), the store runs the reducer, 
+    //calculates the updated state.()
+    //A Redux store runs the root reducer whenever an action is dispatched
     useEffect(() => {
         dispatch(getElementByPath("-home-"));
     }, [dispatch])

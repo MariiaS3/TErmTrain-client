@@ -6,8 +6,13 @@ const INITIAL_ELEMENT_REDUCER_STATE = {
         isErrorOcurred:false
     }
 }
-
-
+//Reducers are functions that calculate a new state value based on previous state + an action
+//reduser  receives two arguments( state, action)
+//provisde state as a default value
+//action describing what happened. action object alvays ave a type field(unique name)
+//An action object can have other fields with additional information about what happened. 
+//By convention, we put that information in a field called payload.
+//update the state immutably by copying the existing state and updating the copy, instead of modifying the original object directly
 const elementReducer = (state=INITIAL_ELEMENT_REDUCER_STATE, action) =>{
     switch(action.type){
         case 'ELEMENTPENDING':{

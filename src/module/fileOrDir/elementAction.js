@@ -1,7 +1,11 @@
 
 import { getElementByNameService, getElementByPathService, getElementnByNameAndPathService } from "./elementService";
 
-
+//when we call store.dispatch(action), the store runs the reducer, 
+//calculates the updated state.
+//The only way to update the state is to call store.dispatch() and pass in an action object. 
+//The store will run its reducer function and save the new state value inside, and we can call getState()
+// to retrieve the updated value
 export const getElementByName = (name) => async (dispatch) => {
     try{
         dispatch({type: 'ELEMENTPENDING'});

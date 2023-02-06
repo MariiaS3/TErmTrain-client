@@ -23,7 +23,7 @@ exports[`App component should render app with error 1`] = `
       </header>
     </div>
     <div
-      class="MuiBox-root css-0"
+      class="child MuiBox-root css-0"
     >
       <div
         class="MuiBox-root css-0"
@@ -33,7 +33,22 @@ exports[`App component should render app with error 1`] = `
         />
         <div
           class="MuiBox-root css-0"
-        />
+        >
+          <i>
+            [username@localhost]#
+          </i>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused css-spqcwk-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              name="prompt"
+              placeholder=""
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
