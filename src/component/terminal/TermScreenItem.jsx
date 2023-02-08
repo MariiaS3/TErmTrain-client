@@ -20,7 +20,23 @@ import { Box, Paper, Typography } from "@mui/material"
 
 const TermScreenItem = (props) => {
     return <Box>
-        <Typography>{props.lineProps.historyLine}</Typography>
+        <i><ul>
+            {
+                <li style={{listStyle:"none"}}>
+                    {props.lineProps.historyLine.includes("#") || props.lineProps.historyLine.includes("$") ?
+                        <span style={{ color: "#53D632", fontSize: "25px" }}>
+                            {props.lineProps.historyLine.includes("#") ? props.lineProps.historyLine.split("#")[0]+"#" : props.lineProps.historyLine.split("$")[0]+"$"}
+                            <span style={{ color: "#D7DEDE" }}>
+                                {props.lineProps.historyLine.includes("#") ? props.lineProps.historyLine.split("#")[1] : props.lineProps.historyLine.split("$")[1]}
+                            </span>
+                        </span> :
+                        <span style={{ color: "#D7DEDE", paddingLeft: "10px" }}>
+                            {props.lineProps.historyLine}
+                        </span>
+                    }
+                </li>
+            }
+        </ul></i>
     </Box>
 }
 

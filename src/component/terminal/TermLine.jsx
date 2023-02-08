@@ -4,27 +4,30 @@ import { useState } from "react";
 
 
 const TermLine = (props) =>{
-    const [prompt, setPrompt] = useState("");
-
+    const [promptInput, setPromptInput] = useState("");
+    const [prompt, setPrompt] = useState("[username@localhost]");
+    const [root, setRoot] = useState("#");
     const handleChange = event => {
-        setPrompt(event.target.value);
+        setPromptInput(event.target.value);
       };
 
 
     return (
         <Box>
-            <i>[username@localhost]#</i> 
-            <Input type="text" 
+            <span id="linecmd"><i>{prompt+root}</i></span>
+            <Input 
+                id="inputcmd"
+                type="text" 
                 disableUnderline={true}
-                placeholder={prompt}
+                placeholder={promptInput}
                 autoFocus={true}
-                value={prompt}
+                value={promptInput}
                 name="prompt"
                 onChange={handleChange}
                 onKeyDown={e => {
                     if (e.key === "Enter") {
-                        props.addToHistoryLineProps(prompt)
-                        setPrompt("");
+                        props.addToHistoryLineProps(prompt+root+"  "+ promptInput)
+                        setPromptInput("");
                     } 
                 }} />
         </Box>

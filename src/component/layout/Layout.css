@@ -1,3 +1,9 @@
+body {
+    margin: auto;
+    background-color: rgb(243, 236, 229);
+    color: rgb(173, 162, 142); 
+}
+
 .child{
-    margin-top: 70px;
+    margin-top: 45px;
 }
