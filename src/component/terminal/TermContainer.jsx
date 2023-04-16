@@ -10,13 +10,14 @@ import Commands from "./Commands";
 
 
 const TermContainer = () =>{
-
+    const [prompt, setPrompt] = useState("[username@localhost]");
     const [historyLine, setHistoryLine] = useState({historyLine:[]});
-    const [path, setPath] = useState({path:"/", prevPath:"/"});
+    const [path, setPath] = useState({path:"/home/", prevPath:"/home/"});
 
     const addToHistoryLine = (line) => {
         let newHistoryLine = [];
         const l = line.split("\n");
+        console.log(path.path);
         for(let i=0;i<l.length; i++){
             const newLine = {
                 id: uuidv4(),
@@ -45,8 +46,7 @@ const TermContainer = () =>{
     return (
         <Box className="termcontainer">
             <TermScreen historyLineProps={historyLine.historyLine}/>
-            <Commands addToHistoryLineProps={addToHistoryLine} path={path.path} prevPath={path.prevPath}/>
-            {console.log(elements)}
+            <Commands addToHistoryLineProps={addToHistoryLine} path={path.path} prevPath={path.prevPath} prompt={prompt} style={{margin:"-10px"}}/>
         </Box>
     )
 }

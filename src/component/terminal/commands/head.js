@@ -1,5 +1,5 @@
-import file from "../tool/file";
-import command from "../tool/manual";
+import file from "./tool/file";
+import command from "./tool/manual";
 
 
 const head = (prompt, title, path) => {

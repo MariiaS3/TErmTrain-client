@@ -1,6 +1,6 @@
 
-import file from "../tool/file"
-import command from "../tool/manual"
+import file from "./tool/file"
+import command from "./tool/manual"
 
 const touch = (prompt, title, path) => {
     var d = prompt + " " + title

@@ -1,4 +1,4 @@
-import command from "../tool/manual";
+import command from "./tool/manual";
 
 
 const history = (prompt, title, history) => {

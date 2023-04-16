@@ -1,7 +1,7 @@
-import command from "../tool/manual"
+import command from "./tool/manual"
 
-const pwd = (prompt, title, path) => {
-    var d = prompt + " " + title + "\n"
+const pwd = (prompt, root, title, path) => {
+    var d = prompt +root+ " " + title + "\n"
     if (title.includes('--help')) {
         d += `\nTu wyświetlane są tylko informacje, które można wykorzystać w tym terminalu. \nŻeby poznać więcej informacji, które można wykorzystać w prawdziwym terminalu proszę ptrzejść do jednej ze stron:
         https://man7.org/linux/man-pages/man1/pwd.1.html \n https://linux.die.net/man/1/pwd \n\n`

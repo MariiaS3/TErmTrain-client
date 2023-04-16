@@ -22,10 +22,12 @@ import TermScreenItem from "./TermScreenItem";
 const TermScreen = (props) => {
 
     return (
-        <Box>
-            {props.historyLineProps.map((line) =>
-                <TermScreenItem lineProps={line} key={line.id} />)}
-        </Box>
+        <div>
+            <ul>
+                {props.historyLineProps.map((line) =>
+                    <TermScreenItem lineProps={line} key={line.id} />)}
+            </ul>
+        </div>
     )
 }
 

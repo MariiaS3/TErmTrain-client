@@ -1,11 +1,11 @@
 import { Box, Input } from "@mui/material"
+import { padding } from "@mui/system";
 import { useState } from "react";
 
 
 
 const TermLine = (props) =>{
     const [promptInput, setPromptInput] = useState("");
-    const [prompt, setPrompt] = useState("[username@localhost]");
     const [root, setRoot] = useState("#");
     const handleChange = event => {
         setPromptInput(event.target.value);
@@ -14,8 +14,8 @@ const TermLine = (props) =>{
 
     return (
         <Box>
-            <span id="linecmd"><i>{prompt+root}</i></span>
-            <Input 
+            <span id="linecmd"><i>{props.prompt+root}</i></span>
+            <Input style={{paddingLeft: "10px"}}
                 id="inputcmd"
                 type="text" 
                 disableUnderline={true}
@@ -26,7 +26,8 @@ const TermLine = (props) =>{
                 onChange={handleChange}
                 onKeyDown={e => {
                     if (e.key === "Enter") {
-                        props.addToHistoryLineProps(prompt+root+"  "+ promptInput)
+                        props.addToHistoryLineProps(props.prompt+root+"  "+ promptInput)
+                        props.listenCmd(promptInput, root);
                         setPromptInput("");
                     } 
                 }} />

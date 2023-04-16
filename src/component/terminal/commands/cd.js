@@ -1,7 +1,7 @@
 
-import directory from "../tool/directory"
-import file from "../tool/file";
-import command from "../tool/manual"
+import directory from "./tool/directory"
+import file from "./tool/file";
+import command from "./tool/manual"
 
 const cd = (prompt, title, prevPath, path) => {
     var d = prompt + " " + title;

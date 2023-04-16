@@ -1,6 +1,6 @@
 
-import directory from "../tool/directory"
-import command from "../tool/manual"
+import directory from "./tool/directory"
+import command from "./tool/manual"
 
 const mkdir = (prompt, title, path) => {
     var d = prompt + " " + title
